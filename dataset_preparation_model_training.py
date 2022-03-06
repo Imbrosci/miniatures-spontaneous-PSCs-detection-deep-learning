@@ -21,11 +21,11 @@ from tensorflow.keras.layers import Input, Dense, Dropout
 from tensorflow.keras.models import Model
 from sklearn import metrics
 
-# %%
+# %% get annotations and recordings and create the dataset
 
-root = '/alzheimer/barbara/all_data/miniatures_spontaneous/'
-annotations_path = 'annotations/notes.xlsx'
-recordings_path = 'recordings/'
+root = 'path/to/directory/'
+annotations_path = 'path/to/file.xlsx'
+recordings_path = 'path/to/directory_with_recordings/'
 annotations_summary = pd.read_excel(root + annotations_path,
                                     sheet_name='Summary')
 
