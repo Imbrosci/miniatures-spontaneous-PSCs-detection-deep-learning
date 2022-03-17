@@ -19,20 +19,12 @@ from sklearn import metrics
 
 # %% create the dataset
 
-root = '/alzheimer/barbara/all_data/miniatures_spontaneous/'
+root = 'path/to/directory/'
 annotations_path = 'annotations/notes.xlsx'
 recordings_path = 'recordings/'
 
 x_train, y_train, x_test, y_test = dataset_generator(root, recordings_path,
                                                      annotations_path)
-
-# %% check 1 random example from the train dataset
-
-num = random.randint(1, x_train.shape[0])
-plt.plot(x_train[num, :])
-plt.plot(y_train[num, :])
-
-plt.title('Label: %d' % num)
 
 # %% shuffle the train and test dataset
 
@@ -90,17 +82,12 @@ model.compile(
     metrics=[tf.keras.metrics.Precision(), tf.keras.metrics.Recall()])
 
 # callbacks
-checkpoint_path = '/alzheimer/barbara/all_data/miniatures_spontaneous/trained_models/model.h5'
-# checkpoint_path = '/alzheimer/barbara/all_data/miniatures_spontaneous/model_weights/'
-# checkpoint_path = checkpoint_path + 'cp-{epoch:03d}.hdf5' in this case add
-# save_freq='epoch' to Modelcheckpoint
+checkpoint_path = 'path/to/model.h5'
 
 callbacks = [tf.keras.callbacks.ModelCheckpoint(checkpoint_path, verbose=1,
                                                 save_best_only=True,
                                                 save_weights_only=True),
              tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=10)]
-
-# model.save_weights(checkpoint_path.format(epoch=0))
 
 # %% fit the model and plot the loss after the training
 
@@ -146,20 +133,6 @@ for i in range(10):
 
     plt.xticks([])
     plt.yticks([])
-
-# %% metrics of saved models weights
-
-# second last training (in trained_models (copy 1))
-# Recall:  0.9753258845437617
-# Precision:  0.8261041009463722
-# Specificity:  0.7956441149212233
-# F1_score:  0.894534585824082
-
-# last training (shorter length limit rise_time
-# Recall:  0.9697392923649907
-# Precision:  0.8216962524654833
-# Specificity:  0.7905468025949953
-# F1_score:  0.8896006833226564
 
 # %% calculate metrics
 
