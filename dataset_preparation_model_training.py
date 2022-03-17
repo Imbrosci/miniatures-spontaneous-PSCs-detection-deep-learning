@@ -2,8 +2,8 @@
 """
 Created in Feb 2022.
 
-This code creates the training and validation datasets, train a deep learning
-model and test its performance on the validation dataset.
+This code creates the training and validation datasets, trains a deep learning
+model and tests its performance on the validation dataset.
 
 @author: imbroscb
 """
@@ -19,7 +19,7 @@ from sklearn import metrics
 
 # %% create the dataset
 
-root = 'path/to/directory/'
+root = '/path/to/directory/'
 annotations_path = 'annotations/notes.xlsx'
 recordings_path = 'recordings/'
 
@@ -82,7 +82,7 @@ model.compile(
     metrics=[tf.keras.metrics.Precision(), tf.keras.metrics.Recall()])
 
 # callbacks
-checkpoint_path = 'path/to/model.h5'
+checkpoint_path = '/path/to/model.h5'
 
 callbacks = [tf.keras.callbacks.ModelCheckpoint(checkpoint_path, verbose=1,
                                                 save_best_only=True,
