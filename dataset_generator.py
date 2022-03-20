@@ -43,7 +43,7 @@ def dataset_generator(root, recordings_path, annotations_path):
         channel = rec[1]
         sheetname = rec[2]
         try:
-            sweep_start = int(rec[5])
+            sweep_start = int(rec[4])
         except ValueError:
             pass
 
