@@ -13,7 +13,7 @@ from get_channels import get_channels
 from butter import lowpass
 
 
-def dataset_generator(root, recordings_path, annotations_path):
+def dataset_generator_base(root, recordings_path, annotations_path):
     """
     Create the training (85%) and validation (15%) datasets.
 
