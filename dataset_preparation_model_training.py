@@ -23,8 +23,8 @@ root = '/path/to/directory/'
 annotations_path = 'annotations/notes.xlsx'
 recordings_path = 'recordings/'
 
-x_train, y_train, x_test, y_test = dataset_generator(root, recordings_path,
-                                                     annotations_path)
+x_train, y_train, x_test, y_test = dataset_generator_base(
+  root, recordings_path, annotations_path)
 
 # %% shuffle the train and test dataset
 
