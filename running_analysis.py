@@ -93,6 +93,8 @@ for index, row in metadata.iterrows():
     channels = []
     if type(row['Channels to use']) == int:
         channels.append(row['Channels to use'])
+    elif type(row['Channels to use']) == float:
+        channels.append(int(row['Channels to use']))
     else:
         for c in row['Channels to use'].split(','):
             channels.append(int(c))
