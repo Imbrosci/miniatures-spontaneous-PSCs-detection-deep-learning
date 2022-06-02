@@ -17,5 +17,4 @@ Clone the repository with the following command: git clone https://github.com/Im
 Navigate to the cloned repository miniatures-spontaneous-PSCs-detection-deep-learning and install the required libraries with the following command: pip install -r requirements.txt.
 Create the folders recordings and results with the following commands: mkdir recordings and mkdir results.
 
-## Preliminary step before starting the analysis 
 
