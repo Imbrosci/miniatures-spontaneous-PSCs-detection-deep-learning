@@ -7,7 +7,7 @@ Here below an example of the performance of the algorithm on a voltage clamp rec
 ![Alt text](/example.jpg?raw=true)
 
 The model is currently under revision. Once the revision will be finished, a detailed explanation on how to use it will follow. 
-Last update: 27.05.22
+Last update: 02.06.22
 
 ## Prerequisites
 Anaconda or miniconda and python 3. We recommend to use python 3.9 and to create a virtual environment as follows: conda create --name my_env anaconda python=3.9.
