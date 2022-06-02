@@ -2,8 +2,9 @@
 
 ### This repository provides a deep learning model to automate the detection of miniatures and spontaneous inward postsynaptic currents (PSCs) in neurophysiological patch-clamp recordings.
 
+Here below an example of the performance of the algorithm on a current clamp recording. The blue dots represents the spontaneous PSCs detected by the algorithm. 
+
 ![Alt text](/example_detection.jpg?raw=true)
-Example of automated detection of spontaneous PSCs.
 
 The model is currently under revision. Once the revision will be finished, a detailed explanation on how to use it will follow. 
 Last update: 27.05.22
