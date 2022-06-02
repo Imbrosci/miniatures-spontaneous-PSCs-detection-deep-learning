@@ -4,7 +4,6 @@
 
 Here below an example of the performance of the algorithm on a voltage clamp recording. The blue dots represents the spontaneous PSCs detected by the algorithm. 
 
-![Alt text](/example_detection.jpg?raw=true)
 
 The model is currently under revision. Once the revision will be finished, a detailed explanation on how to use it will follow. 
 Last update: 27.05.22
