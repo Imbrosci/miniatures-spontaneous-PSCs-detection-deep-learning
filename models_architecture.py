@@ -12,7 +12,6 @@ tf.config.list_physical_devices('GPU')
 
 from tensorflow.keras.layers import Input, Dense, Dropout
 from tensorflow.keras.models import Model
-# tf.config.optimizer.set_jit(enabled='autoclastering')
 
 
 class ModelBase:
