@@ -6,10 +6,8 @@
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
-
 import tensorflow as tf
 tf.config.list_physical_devices('GPU')
-
 from tensorflow.keras.layers import Input, Dense, Dropout
 from tensorflow.keras.models import Model
 
