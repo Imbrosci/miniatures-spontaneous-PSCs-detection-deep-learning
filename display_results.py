@@ -5,6 +5,8 @@ Created on Thu Apr 14 10:42:02 2022.
 @author: barbara
 """
 
+import warnings
+warnings.filterwarnings('ignore')
 import matplotlib.pyplot as plt
 import numpy as np
 import os
