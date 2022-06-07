@@ -6,18 +6,15 @@ Here below an example of the performance of the algorithm on a voltage clamp rec
 
 ![Alt text](/example.jpg?raw=true)
 
-The model is currently under revision. Once the revision will be finished, a detailed explanation on how to use it will follow. 
-Last update: 05.06.22
-
 ## Prerequisites
-Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: conda create --name my_env python=3.10.
+Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: *conda create --name my_env python=3.10*.
 
 ## Installation
-Clone the repository on your local machine with the following command: git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git. 
+Clone the repository on your local machine with the following command: *git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git*. 
 Navigate to the cloned repository, spontaneous-postsynaptic-currents-detection and:
-1) install the required libraries with: pip install -r requirements.txt;
-2) install tensorflow with: conda install -c conda-forge tensorflow;
-3) create two folders, named recordings and results, with: mkdir recordings results.
+1) install the required libraries with: *pip install -r requirements.txt*;
+2) install tensorflow with: *conda install -c conda-forge tensorflow*;
+3) create two folders, named recordings and results, with: *mkdir recordings results*.
 
 ## Preliminary step before starting the analysis 
 Before starting the analysis, there are two simple, but important steps to do.
@@ -33,7 +30,7 @@ Each column of the metadata.xlsx file should be filled as explained below:
 - Analysis length (min): enter how many minutes of recording should be analysed. Be aware that analysing many minutes at once (especially if a recording was acquired with a high sampling rate) may cause difficulties in displaying or proof-reading the results. If the recording is shorter than the time indicated in this option, the algorithm will just analyse the recordings until the end. 
 
 ## Starting the analysis
-To start the recording, navigate in the repository folder and type: python running_analysis.py. If everything is running correctly, after a few moments, some details about the analysis will be printed.
+To start the recording, navigate in the repository folder and type: *python running_analysis.py*. If everything is running correctly, after a few moments, some details about the analysis will be printed.
 If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the results.xlsx file or move it in another folder. 
 
 ## Excel file containing the results
@@ -56,10 +53,10 @@ The summary results sheet contain the following information for each recording:
 - Manually revised (if the results were manually corrected or not, see proof-read results section for details).
 
 ## Check results
-To check the quality of the results use the command: python display_results.py. The program will ask to enter the file name (including extension) and the channel to display.
+To check the quality of the results use the command: *python display_results.py*. The program will ask to enter the file name (including extension) and the channel to display.
 Two windows will appear. The first window displays the recorded signal and the detected events (as blue dots), the second window represents the average signal from all detected events. The rise (10-90%) and the decay (90-10%) time will be also displayed as cyan and pink dots, respectively. 
 
 ## Proof-read results
 If the results are not satisfactory, it is also possible to correct them. 
-To correct the results (add false negatives or delete false positives), use the command: python proof_read_results.py. 
+To correct the results (add false negatives or delete false positives), use the command: *python proof_read_results.py*. 
 A window with the recorded signal and the detected events (as orange dots) will appear. A navigation bar on top of the image allows to navigate through the trace, zoom in or zoom out. To add a missed event (false negative) press the keyboard button ‘a’, to delete a wrongly detected event (false positive) press the keyboard button ‘d’. Once done, press ‘u’ to update the results.xlsx file. Go to the results.xlsx file and check if now the manually revised column indicates ‘yes’ for the revised recording.
