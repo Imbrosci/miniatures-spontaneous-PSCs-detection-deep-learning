@@ -31,7 +31,7 @@ Each column of the metadata.xlsx file should be filled as explained below:
 
 ## Starting the analysis
 To start the recording, navigate in the repository folder and type: *python running_analysis.py*. If everything is running correctly, after a few moments, some details about the analysis will be printed.
-If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the results.xlsx file or move it in another folder. 
+If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the results.xlsx file or move it into another folder. 
 
 ## Excel file containing the results
 Once the results are finished, a results.xlsx file will be generated and can be found under the folder results. 
