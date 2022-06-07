@@ -22,7 +22,7 @@ Navigate to the cloned repository, spontaneous-postsynaptic-currents-detection a
 ## Preliminary step before starting the analysis 
 Before starting the analysis, there are two simple, but important steps to do.
 1) move the recordings to be analysed in the folder recordings. The accepted formats are abf and txt files.
-2) fill the metadata.xlsx file a template of which can be found in the folder metadata.
+2) fill the metadata.xlsx file. A template should be found in the folder metadata.
 Each column of the metadata.xlsx file should be filled as explained below:
 - Name of recording: name of the file with the recording including the extension (.abf or .txt). The files listed should be found in the recording folder. 
 - Channels to use: if your recording file contains only one channel, enter 1; in case your recording file contains more channels, you should indicate which channels should be analysed. If you want to analyse more channels per file you can enter the name of the channels separated by a comma or you could keep one row per channel. The algorithm will number the channels found in the recording file in ascending order starting from 1.
