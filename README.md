@@ -31,7 +31,7 @@ Before starting the analysis, there are two simple, but important steps to do.
 * **Analysis length (min):** enter how many minutes of recording should be analysed. Be aware that analysing many minutes at once (especially if a recording was acquired with a high sampling rate) may cause difficulties in displaying or proof-reading the results. If the recording is shorter than the time indicated in this option, the algorithm will just analyse the recordings until the end. 
 
 ## Starting the analysis
-To start the recording, navigate in the repository directory and type: *python running_analysis.py*. If everything is running correctly, after a few moments, some details about the analysis will be printed.
+To start the recording, navigate into the repository directory and type: *python running_analysis.py*. If everything is running correctly, after a few moments, some details about the analysis will be printed.
 If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the results.xlsx file or move it into another directory. 
 
 ## Excel file containing the results
