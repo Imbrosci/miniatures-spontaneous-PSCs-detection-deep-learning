@@ -14,7 +14,7 @@ Clone the repository on your local machine with the following command: *git clon
 Navigate into the cloned repository, spontaneous-postsynaptic-currents-detection and perform the following steps.
 1) make sure that you have pip upgraded with: *pip install --upgrade pip*.
 2) install tensorflow with: *conda install tensorflow=2.7*. You may want to check that tensorflow was installed correctly. To do so, type: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. This command should return a tensor (tf.Tensor).
-3) install the required libraries with: *pip install -r requirements.txt*;
+3) install the required libraries with: *pip install -r requirements.txt*.
 4) create two directories, named recordings and results, with: *mkdir recordings results*.
 
 ## Preliminary step before starting the analysis 
@@ -37,21 +37,21 @@ If there is already a results.xlsx file produced by a former analysis the progra
 ## Excel file containing the results
 Once the results are finished, a results.xlsx file will be generated and can be found under the directory results. 
 In the results.xlsx file, there will be a sheet for each analysed recording_channel and summary results sheet.
-The sheets for single recording_channel report the x and y position (in ms and pA, respectively), the interevent interval (between event + 1 and event) (in ms) and the amplitude (in pA) for each detected event.
+The sheets for single recording_channel report **the x and y position** (in ms and pA, respectively), **the interevent interval** (between event + 1 and event) (in ms) and **the amplitude** (in pA) for each detected event.
 The summary results sheet contain the following information for each recording:
-* Recording filename;
-* Channel;
-* Sampling rate (Hz);
-* Analysis start at sweep (number);
-* Cut sweeps first part (ms);
-* Cut sweeps last part (ms);
-* Analysis length (sec) (this may be shorter than specified in the metadata if the recording was shorter);
-* Average interevent interval (ms);
-* Average amplitude (pA);
-* Average 10-90% rise time (ms) (it is calculated from the mean signal of all detected event);
-* Average 90-10% decay time (ms) (it is calculated from the mean signal of all detected event);
-* Stdev of the baseline signal (pA) (Stdev = standard deviation, it is calculated from the trace after excluding the detected events - - it may provide an information about the quality of the recording and it can be used to exclude certain recordings from the analysis, if, for example, the average amplitude is not larger than 3 times the Stdev);
-* Manually revised (if the results were manually corrected or not, see proof-read results section for details).
+* **Recording filename**;
+* **Channel**;
+* **Sampling rate (Hz)**;
+* **Analysis start at sweep (number)**;
+* **Cut sweeps first part (ms)**;
+* **Cut sweeps last part (ms)**;
+* **Analysis length (sec)**, this may be shorter than specified in the metadata if the recording was shorter;
+* **Average interevent interval (ms)**;
+* **Average amplitude (pA)**;
+* **Average 10-90% rise time (ms)**, calculated from the mean signal of all detected event;
+* **Average 90-10% decay time (ms)**, calculated from the mean signal of all detected event;
+* **Stdev of the baseline signal (pA)**, Stdev stays for standard deviation and it is calculated from the trace after excluding the detected events, it may provide an information about the quality of the recording and it can be used to exclude certain recordings from the analysis, if, for example, the average amplitude is not larger than 3 times the Stdev);
+* **Manually revised**, specified if the results were manually corrected or not, (see proof-read results section for details).
 
 ## Check results
 To check the quality of the results use the command: *python display_results.py*. The program will ask to enter the file name (including extension) and the channel to display.
