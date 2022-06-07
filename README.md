@@ -25,7 +25,7 @@ Before starting the analysis, there are two simple, but important steps to do.
 2) fill the metadata.xlsx file. A template should be found in the folder metadata.
 Each column of the metadata.xlsx file should be filled as explained below:
 - Name of recording: name of the file with the recording including the extension (.abf or .txt). The files listed should be found in the recording folder. 
-- Channels to use: if your recording file contains only one channel, enter 1; in case your recording file contains more channels, you should indicate which channels should be analysed. If you want to analyse more channels per file you can enter the name of the channels separated by a comma or you could keep one row per channel. The algorithm will number the channels found in the recording file in ascending order starting from 1.
+- Channels to use: if your recording file contains only one channel, enter 1; in case your recording file contains more channels, you should indicate which channels should be analysed. If you want to analyse more channels of a file you can enter the name of the channels separated by a comma or you could keep one row per channel. The algorithm will number the channels found in the recording file in ascending order starting from 1.
 - Sampling rate (Hz): sampling rate in Herz.
 - Analysis start at sweep (number): sweep from which the analysis should start. If your recordings do not have multiple sweeps, select 1. If the recordings have multiple sweeps, the sweeps should have equal length.
 - Cut sweeps first part (ms): this option offers the possibility to cut out, from the mPSCs / sPSCs analysis, a portion of trace at the beginning of each sweep. This may be relevant if a test pulse (to check, for instance, the stability of a patch clamp recording), or another kind of stimulation, was delivered at the beginning of each sweep. For example, to remove the first half a second of trace from the beginning of each sweep, enter 500.
@@ -34,7 +34,7 @@ Each column of the metadata.xlsx file should be filled as explained below:
 
 ## Starting the analysis
 To start the recording, navigate in the repository folder and type: python running_analysis.py. If everything is running correctly, after a few moments, some details about the analysis will be printed.
-If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the xlsx file or move it in another folder. 
+If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the results.xlsx file or move it in another folder. 
 
 ## Excel file containing the results
 Once the results are finished, a results.xlsx file will be generated and can be found under the folder results. 
