@@ -10,12 +10,12 @@ The model is currently under revision. Once the revision will be finished, a det
 Last update: 05.06.22
 
 ## Prerequisites
-Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: conda create --name my_env anaconda python=3.10.
+Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: conda create --name my_env python=3.10.
 
 ## Installation
 Clone the repository on your local machine with the following command: git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git. 
 Navigate to the cloned repository, spontaneous-postsynaptic-currents-detection and:
 1) install the required libraries with: pip install -r requirements.txt;
-2) create two folders, named recordings and results, with: mkdir recordings and mkdir results.
-
+2) install tensorflow with: conda install -c conda-forge tensorflow;
+3) create two folders, named recordings and results, with: mkdir recordings results.
 
