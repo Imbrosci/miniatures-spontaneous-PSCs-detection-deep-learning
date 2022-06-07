@@ -18,9 +18,9 @@ Navigate into the cloned repository, spontaneous-postsynaptic-currents-detection
 4) create two directories, named recordings and results, with: *mkdir recordings results*.
 
 ## Preliminary step before starting the analysis 
-Before starting the analysis, there are two simple, but important steps to do.
-1) move the recordings to be analysed in the directory recordings. The accepted format is either abf or txt.
-2) fill the metadata.xlsx file. A template should be found in the directory metadata.
+Before starting the analysis, there are two simple, but important, steps to do.
+1) move the recordings to be analysed in the directory recordings. The recordings should either be abf or txt files.
+2) fill the metadata.xlsx file. This file can be found in the directory metadata of the repository.
   Each column of the metadata.xlsx file should be filled as explained below:
   * **Name of recording:** name of the file with the recording including the extension (.abf or .txt). The files listed should be found in the recording directory. 
   * **Channels to use:** if your recording file contains only one channel, enter 1; in case your recording file contains more channels, you should indicate which channels should be analysed. If you want to analyse more channels of a file you can enter the name of the channels separated by a comma or you could keep one row per channel. The algorithm will number the channels found in the recording file in ascending order starting from 1.
@@ -31,7 +31,7 @@ Before starting the analysis, there are two simple, but important steps to do.
 * **Analysis length (min):** enter how many minutes of recording should be analysed. Be aware that analysing many minutes at once (especially if a recording was acquired with a high sampling rate) may cause difficulties in displaying or proof-reading the results. If the recording is shorter than the time indicated in this option, the algorithm will just analyse the recordings until the end. 
 
 ## Starting the analysis
-To start the recording, navigate into the repository directory and type: *python running_analysis.py*. If everything is running correctly, after a few moments, some details about the analysis will be printed.
+To start the recording, navigate into the repository directory and type: *python running_analysis.py*. If everything run correctly some details about the analysis will be printed shortly after.
 If there is already a results.xlsx file produced by a former analysis the program will ask you the permission to overwrite the results. To do not overwrite the previous results, just change the name of the results.xlsx file or move it into another directory. 
 
 ## Excel file containing the results
