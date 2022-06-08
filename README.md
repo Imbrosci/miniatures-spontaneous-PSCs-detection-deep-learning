@@ -7,14 +7,14 @@ Here below an example of the performance of the algorithm on a voltage clamp rec
 ![Alt text](/example.jpg?raw=true)
 
 ## Prerequisites
-Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: *conda create --name my_env python=3.10*.
+Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: *conda create --name my_env python=3.10*, where, my_env is a name of your choice. Activate the created environment for the installation of the required packages (see installation section) and for the usage of the algorithm with: *conda activate my_env*.
 
 ## Installation
 Clone the repository on your local machine with the following command: *git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git*. 
 Navigate into the cloned repository, spontaneous-postsynaptic-currents-detection and perform the following steps.
 1) install tensorflow with: *conda install tensorflow=2.7*. You may want to check that tensorflow was installed correctly. To do so, type: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. This command should return a tensor (tf.Tensor).
 2) make sure that you have pip upgraded with: *pip install --upgrade pip*.
-3) install the required libraries with: *pip install -r requirements.txt*.
+3) install the additionally required packages with: *pip install -r requirements.txt*.
 4) create two directories, named recordings and results, with: *mkdir recordings results*.
 
 ## Preliminary step before starting the analysis 
@@ -58,6 +58,6 @@ To check the quality of the results use the command: *python display_results.py*
 Two windows will appear. The first window displays the recorded signal and the detected events (as blue dots), the second window represents the average signal from all detected events. The rise (10-90%) and the decay (90-10%) time will be also displayed as cyan and pink dots, respectively. 
 
 ## Proof-read results
-If the results are not satisfactory, it is also possible to correct them. 
-To correct the results (add false negatives or delete false positives), use the command: *python proof_read_results.py*. 
-A window with the recorded signal and the detected events (as orange dots) will appear. A navigation bar on top of the image allows to navigate through the trace, zoom in or zoom out. To add a missed event (false negative) press the keyboard button ‘a’, to delete a wrongly detected event (false positive) press the keyboard button ‘d’. Once done, press ‘u’ to update the results.xlsx file. Go to the results.xlsx file and check if now the manually revised column indicates ‘yes’ for the revised recording.
+If the results are not satisfactory, it is also possible to revise them. 
+To correct the results (add false negatives or delete false positives), use the command: *python proof_read_results.py*. As to check the results, the program will ask to enter the file name and the channel to revise. 
+A window with the recorded signal and the detected events (as orange dots) will appear. A navigation toolbar on top or on the bottom of the image allow you to navigate through the trace. To add a missed event (false negative) press the keyboard button ‘a’, to delete a wrongly detected event (false positive) press the keyboard button ‘d’. If the revision works, an added datapoint should appear in blue, while a deleted datapoint should turn into red. On Mac it may be necessary to click the left button of the mouse just after pressing 'a' or 'd' for the revision to take place. Once the proof-reading is done, press ‘u’ to update the results.xlsx file. Wait a few moment before closing the window. Once the update is finished, a statement should be printed. Go to the results.xlsx file and check if now the manually revised column indicates ‘yes’ for row corresponding to the revised recording.
