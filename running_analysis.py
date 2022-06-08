@@ -372,9 +372,15 @@ for index, row in metadata.iterrows():
 
         # write the average interevent interval and amplitude
         main_result_sheet.write(mrs_current_row, 6, signal_lp.shape[0] / fs)
-        main_result_sheet.write(mrs_current_row, 7,
-                                average_interevent_interval)
-        main_result_sheet.write(mrs_current_row, 8, average_amplitude)
+        try:
+            main_result_sheet.write(mrs_current_row, 7,
+                                    average_interevent_interval)
+        except TypeError:
+            pass
+        try:
+            main_result_sheet.write(mrs_current_row, 8, average_amplitude)
+        except TypeError:
+            pass
 
         # calculate the mean rise (10-90%) and the mean decay time (90-10%)
         mean_rise_time = parameters.rise_time()[0]
