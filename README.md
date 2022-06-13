@@ -10,12 +10,7 @@ Here below an example of the performance of the algorithm on a voltage clamp rec
 Anaconda or miniconda and python 3. We recommend to use python 3.10 and to create a virtual environment as follows: *conda create --name my_env python=3.10*, where, my_env is a name of your choice. Activate the created environment for the installation of the required packages (see installation section) and for the usage of the algorithm with: *conda activate my_env*.
 
 ## Installation
-1) install tensorflow; you can try one of the following commands (depending on your system): 
-  1.1) *pip install tensorflow*;
-  1.2) *conda install tensorflow*;
-  1.3) *conda install -c conda-forge tensorflow*. 
-  Alternatively, go to: https://www.tensorflow.org/install/pip and follow the instructions.
- (Optional) As suggested in the TensorFlow documentation, you can verify the CPU setup by typing: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. If TensorFlow was installed successfully, this command will return a tensor (tf.Tensor). You can also test the GPU setup (if you have a GPU on your machine) by typing: *python3 -c "import tensorflow as tf; tf.config.list_physical_devices('GPU'))"*. If TensorFlow was installed successfully, this command will return a list of GPU devices.
+1) install tensorflow; you can try one of the following commands (depending on your system): *pip install tensorflow*, *conda install tensorflow* or *conda install -c conda-forge tensorflow*. Alternatively, go to: https://www.tensorflow.org/install/pip and follow the instructions. (Optional) As suggested in the TensorFlow documentation, you can verify the CPU setup by typing: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. If TensorFlow was installed successfully, this command will return a tensor (tf.Tensor). You can also test the GPU setup (if you have a GPU on your machine) by typing: *python3 -c "import tensorflow as tf; tf.config.list_physical_devices('GPU'))"*. If TensorFlow was installed successfully, this command will return a list of GPU devices.
 
 2) Clone the repository on your local machine with the following command: *git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git*. 
 
