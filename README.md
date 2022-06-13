@@ -16,8 +16,7 @@ Navigate into the cloned repository, spontaneous-postsynaptic-currents-detection
   * *pip install tensorflow*;
   * *conda install tensorflow*;
   * *conda install -c conda-forge tensorflow*. 
-  (Optional) After installation you can type: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. 
-  If tensorflow was installed correctly this command returns a tensor (tf.Tensor).
+  (Optional) As suggested in the TensorFlow documentation, you can verify the CPU setup by typing: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. If TensorFlow was installed successfully, this command will return a tensor (tf.Tensor). You can also test the GPU setup (if you have a GPU on your machine) by typing: *python3 -c "import tensorflow as tf; tf.config.list_physical_devices('GPU'))"*. If TensorFlow was installed successfully, this command will return a list of GPU devices.
 2) make sure that you have pip upgraded with: *pip install --upgrade pip*.
 3) install the additionally required packages with: *pip install -r requirements.txt*.
 4) create two directories, named recordings and results, with: *mkdir recordings results*.
