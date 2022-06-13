@@ -11,13 +11,18 @@ Anaconda or miniconda and python 3. We recommend to use python 3.10 and to creat
 
 ## Installation
 Clone the repository on your local machine with the following command: *git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git*. 
-Navigate into the cloned repository, spontaneous-postsynaptic-currents-detection and perform the following steps.
-1) install tensorflow with: *conda install tensorflow=2.7* if you have a Linux. You may want to check that tensorflow was installed correctly. To do so, type: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. This command should return a tensor (tf.Tensor).
+Navigate into the cloned repository, spontaneous-postsynaptic-currents-detection and perform the steps described below.
+1) install tensorflow; you should try one of the following commands (depending on your system): 
+  * *pip install tensorflow*;
+  * *conda install tensorflow*;
+  * *conda install -c conda-forge tensorflow*. 
+  (Optional) After installation you can type: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. 
+  If tensorflow was installed correctly this command returns a tensor (tf.Tensor).
 2) make sure that you have pip upgraded with: *pip install --upgrade pip*.
 3) install the additionally required packages with: *pip install -r requirements.txt*.
 4) create two directories, named recordings and results, with: *mkdir recordings results*.
 
-## Preliminary step before starting the analysis 
+## Preliminary steps before starting the analysis 
 Before starting the analysis, there are two simple, but important, steps to do.
 1) move the recordings to be analysed in the directory recordings. The recordings should either be abf or txt files.
 2) fill the metadata.xlsx file. This file can be found in the directory metadata of the repository.
