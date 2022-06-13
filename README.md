@@ -14,6 +14,7 @@ Anaconda or miniconda and python 3. We recommend to use python 3.10 and to creat
   * *pip install tensorflow*;
   * *conda install tensorflow*;
   * *conda install -c conda-forge tensorflow*. 
+  Alternatively, go to: https://www.tensorflow.org/install/pip and follow the instructions.
   (Optional) As suggested in the TensorFlow documentation, you can verify the CPU setup by typing: *python3 -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"*. If TensorFlow was installed successfully, this command will return a tensor (tf.Tensor). You can also test the GPU setup (if you have a GPU on your machine) by typing: *python3 -c "import tensorflow as tf; tf.config.list_physical_devices('GPU'))"*. If TensorFlow was installed successfully, this command will return a list of GPU devices.
 
 2) Clone the repository on your local machine with the following command: *git clone https://github.com/Imbrosci/spontaneous-postsynaptic-currents-detection.git*. 
