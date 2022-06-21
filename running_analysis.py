@@ -228,7 +228,6 @@ for index, row in metadata.iterrows():
 
         input_data = input_data.reshape(input_data.shape[0],
                                         input_data.shape[1], 1)
-        print(input_data.shape)
         pred = model_base.predict(input_data)
         prediction_trace = pred.reshape(-1,)
         prediction_trace = lowpass(prediction_trace, 500)
