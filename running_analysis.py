@@ -168,7 +168,7 @@ for index, row in metadata.iterrows():
                                 int(first_point / fs * 1000))
         main_result_sheet.write(mrs_current_row, 5,
                                 int((sweep_length - last_point) / fs * 1000))
-        print(recording_file, ch)
+
         # get the portion of recording to analyse
         analysis_end = min(analysis_end, len(signal))
         signal = signal[:analysis_end]
