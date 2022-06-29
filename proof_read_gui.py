@@ -143,7 +143,7 @@ class MiniSpontProof:
 
             # calculate the stdev of the baseline signal
             stdev = parameters.amplitude_stdev()[1]
-            average_stdev = np.nanstd(stdev)
+            average_stdev = np.nanmean(stdev)
 
             # load the excel file
             wb = load_workbook(self.root + self.results_path)
