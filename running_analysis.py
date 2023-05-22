@@ -232,7 +232,7 @@ for index, row in metadata.iterrows():
         prediction_trace = pred.reshape(-1,)
         prediction_trace = lowpass(prediction_trace, 500)
 
-        # get the events using two threshold on the prediction trace and some
+        # get the events using two thresholds on the prediction trace and some
         # additional steps
         thr1 = 0.20
         thr2 = 0.10
